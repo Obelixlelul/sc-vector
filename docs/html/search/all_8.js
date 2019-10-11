@@ -1,0 +1,21 @@
+var searchData=
+[
+  ['iccp_5fdefined',['iccp_defined',['../struct_lode_p_n_g_info.html#a6304883960715cbcebf45a05c40d5b53',1,'LodePNGInfo']]],
+  ['iccp_5fname',['iccp_name',['../struct_lode_p_n_g_info.html#a0e139ec8c88c920bedb602090a3546d0',1,'LodePNGInfo']]],
+  ['iccp_5fprofile',['iccp_profile',['../struct_lode_p_n_g_info.html#a4400b67420e9c225881901bb48eda9b2',1,'LodePNGInfo']]],
+  ['iccp_5fprofile_5fsize',['iccp_profile_size',['../struct_lode_p_n_g_info.html#a11eaae6ecbb308ac1e70dcd10fee6891',1,'LodePNGInfo']]],
+  ['ignore_5fadler32',['ignore_adler32',['../struct_lode_p_n_g_decompress_settings.html#afab4b919650b51b4d2f175a60ed6c580',1,'LodePNGDecompressSettings']]],
+  ['ignore_5fcrc',['ignore_crc',['../struct_lode_p_n_g_decoder_settings.html#a6390c403d2a5718242337bbbaf15131d',1,'LodePNGDecoderSettings']]],
+  ['ignore_5fcritical',['ignore_critical',['../struct_lode_p_n_g_decoder_settings.html#a51c3ce791f1b1d325d5e1f7e18caeeea',1,'LodePNGDecoderSettings']]],
+  ['ignore_5fend',['ignore_end',['../struct_lode_p_n_g_decoder_settings.html#aa8f3907b3dcaf09892a752806be2fc59',1,'LodePNGDecoderSettings']]],
+  ['image_5fdepth',['image_depth',['../classlife_1_1_canvas.html#a91085de7195ca7c7a016442491dd972a',1,'life::Canvas']]],
+  ['info_5fpng',['info_png',['../struct_lode_p_n_g_state.html#a08d9ac43c995fcf34d72b1d37047b6fa',1,'LodePNGState']]],
+  ['info_5fraw',['info_raw',['../struct_lode_p_n_g_state.html#a597bc08de787147474d43adf8b6ceacf',1,'LodePNGState']]],
+  ['interlace_5fmethod',['interlace_method',['../struct_lode_p_n_g_info.html#a80207e3e53c959b2285636496a3dd3f1',1,'LodePNGInfo']]],
+  ['itext_5fkeys',['itext_keys',['../struct_lode_p_n_g_info.html#a1b909e03596abf86d564641741b0087f',1,'LodePNGInfo']]],
+  ['itext_5flangtags',['itext_langtags',['../struct_lode_p_n_g_info.html#ae9f9f594e63c910d467a14f550960837',1,'LodePNGInfo']]],
+  ['itext_5fnum',['itext_num',['../struct_lode_p_n_g_info.html#a22166bb10c89a4d80e206d6c4736b625',1,'LodePNGInfo']]],
+  ['itext_5fstrings',['itext_strings',['../struct_lode_p_n_g_info.html#a7014fd40ffeb1d482f72d33c020cf73e',1,'LodePNGInfo']]],
+  ['itext_5ftranskeys',['itext_transkeys',['../struct_lode_p_n_g_info.html#a93a8e823ac715dbdd625f023d8fdebc2',1,'LodePNGInfo']]],
+  ['introdução',['Introdução',['../md__r_e_a_d_m_e.html',1,'']]]
+];

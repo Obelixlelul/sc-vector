@@ -1,0 +1,73 @@
+Esse é um mini-\/projeto de implementação que faz parte do {\itshape Projeto Jogo da Vida} da 2a Unidade de L\+P1.
+
+O objetivo desse projeto é desenvolver uma classe que representa um abstração de um canvas para desenho. Esse canvas deve ser capaz de suportar operações de desenho simples, como definir a cor de fundo e definir a cor de um pixel, por exemplo.
+
+Uma vez realizado desenhos em um objeto do tipo canvas, o objeto deve ser capaz de retornar um ponteiro para os dados do desenho armazenados na memória. Por sua vez, a organização dos dados na memória segue o formato de uma imagem do tipo \href{https://en.wikipedia.org/wiki/Netpbm_format}{\texttt{ P\+PM}}.
+
+Isso quer dizer que cada pixel deve possuir 4 canais, R, G, B e Alpha, embora o canal Alpha não seja utilizado na prática no projeto Jogo da Vida.
+
+\section*{Contexto de Uso do Canvas}
+
+Para você entender melhor o funcionamento e motivação do canvas, é importante saber em que contexto ele será necessário.
+
+O Projeto Jogo da Vida consiste em simular um \href{https://en.wikipedia.org/wiki/Cellular_automaton}{\texttt{ {\itshape cellular automaton}}}, que basicamente é uma simulação discreta que ocorre sobre um tabuleiro de dimensões {\itshape W x H} (largura x altura). Nesse tabuleiro, uma célula pode ser definida inicialmente como {\bfseries{viva}} ou {\bfseries{morta}}. A cada passo da simulação, todas as células do tabuleiro são avaliadas de acordo com um conjunto de regras; o resultado dessa avaliação é que algumas células vivas morrerão e outras células nascerão.
+
+Nesse momento, não vamos entrar em detalhes sobre como o processo de atualização e aplicação de regras vai funcionar (isso será descrito no Projeto Jogo da Vida). O importante é saber que a cada passo da simulação precisamos gerar uma {\bfseries{imagem}} que represente o estado do tabuleiro naquela {\itshape iteração} (ou geração) da simulação. Nessa representação visual, as células vivas serão exibidas em uma certa cor, e as demais células (mortas ou inexistentes) com a cor de fundo.
+
+É por esse motivo que o projeto precisa de um mecanismo para gerar uma imagem a partir dos dados da simulação. É nesse momento que surge a necessidade da classe {\ttfamily Canvas} cujo objetivo é justamente produzir uma imagem a partir dos dados da simulação. Nesse caso podemos afirmar que o Jogo da Vida (aplicação) será o {\bfseries{cliente}} da classe {\ttfamily Canvas}.
+
+Veja a imagem abaixo com um exemplo de saída da simulação.
+
+
+
+A imagem acima corresponde a um tabuleiro do jogo da vida com {\itshape W=10} por {\itshape H=10}. Os pixeis em vermelho representam as células vivas e as demais células são exibidas em verde claro.
+
+Em resumo, precisamos de uma classe que suporte\+:
+\begin{DoxyEnumerate}
+\item Definir uma cor de fundo ou de células vazias e/ou mortas;
+\item \char`\"{}\+\_\+\+Pintar\+\_\+\char`\"{} os pixeis de uma imagem com uma cor específica (células vivas), e;
+\item Enviar essa matriz de pixeis coloridos para uma função externa que grave essas informações em formato {\itshape png}, por exemplo.
+\end{DoxyEnumerate}
+
+Essas ações corresponderão a três métodos da classe {\ttfamily Canvas}.
+
+\section*{Canvas Virtual {\itshape vs} Canvas Real}
+
+Como demonstrado em sala de aula, se utilizarmos um mapeamento 1-\/para-\/1 entre uma célula viva do Projeto Jogo da Vida e um pixel na imagem de saída, a imagem resultante será muito pequena e difícil de visualizar.
+
+Para demonstrar esse exemplo, suponha que desejamos gerar um {\itshape checkerboard} (tabuleiro quadriculado, similar ao de xadrez) de tamanho {\itshape W = 20} x {\itshape H = 15}. Se o mapeamento for 1-\/para-\/1, ou seja, uma célula colorida para um pixel, a imagem resultado seria a exibida abaixo. É possível perceber que a imagem é muito pequena, com dimensões {\itshape 20 x 15} pixeis.
+
+
+
+Para contornar o problema de conseguir visualizar tabuleiros de pequenas dimensões, podemos permitir que o usuário especifique um {\bfseries{pixel virtual}}. Para isso, basta que o cliente defina a dimensão do pixel virtual como sendo um inteiro {\ttfamily block\+\_\+size} $>$= 1. Quanto maior o {\ttfamily block\+\_\+size} maior será a imagem resultante. Por exemplo, o mesmo {\itshape checkerboard} acima foi gerada com {\ttfamily block\+\_\+size} = 50, ou seja, um pixel no canvas virtual corresponde a um {\itshape quadrado} 50x50 na imagem real.
+
+Isso quer dizer que no exemplo o cliente especificou que desejava uma imagem {\itshape W}=20 x {\itshape H}=15 com {\ttfamily block\+\_\+size} = 50. Como resultado, a imagem no canvas real acabou com dimensões 1000 x 750, visto que cada {\itshape pixel virtual} ocupa um bloco de 50 x 50 {\itshape pixeis reais}.
+
+
+
+\section*{Implementando a Solução Proposta}
+
+Para permitir a criação de um canvas virtual maior, vamos solicitar ao cliente que informe o {\ttfamily block\+\_\+size}, ou seja, a dimensão do pixel virtual. Dessa forma o cliente ainda vai indicar o tamanho do canvas correspondente ao número de linhas e colunas do seu tabuleiro, por exemplo {\itshape W=20} x {\itshape H=15}, mas agora com a possibilidade de definir o tamanho do pixel, como acima com {\ttfamily block\+\_\+size=50}.
+
+A imagem resultante final (retornada pelo objeto {\ttfamily Canvas}) será na verdade uma imagem de largura {\ttfamily Width=1000} por altura {\ttfamily Height=750}, visto que cada \char`\"{}pixel\char`\"{} virtual ocupa, na verdade, um quadrado de 50 x 50 pixeis reais.
+
+Considere o código abaixo como exemplo
+
+
+\begin{DoxyCode}{0}
+\DoxyCodeLine{Canvas canv\{ 20, 15, 50 \};          // Cria um canvas com W=20 x H=15 e block size = 50.}
+\DoxyCodeLine{}
+\DoxyCodeLine{canv.clear( YELLOW );               // Pinta todo canvas de amarelo.}
+\DoxyCodeLine{canv.pixel( Point2\{ 8, 5\}, BLUE );  // Solicita que o pixel (8,5) seja pintado de azul.}
+\end{DoxyCode}
+
+
+Nesse exemplo, o cliente pede que a posição {\ttfamily (8,5)} seja pintada de cor azul. Contudo, o que vai acontecer na verdade é que um quadrado de {\itshape 50 x 50} a partir da posição {\ttfamily (400,250)} será pintado de azul na imagem final. Em outras palavras, estamos abstraindo para o cliente um mapeamento entre a posição original {\ttfamily (8,5)} para a posição real {\ttfamily (400,250)} e, simultaneamente, mapeando 1 pixel para um quadrado de {\itshape 50 x 50}.
+
+\section*{O Que Devo Fazer?}
+
+Sua tarefa, portanto, consiste em implementar a classe {\ttfamily Canvas} para suportar as funcionalidade definidas acima. Para tanto, você pode seguir a sugestão de interface para a classe presente no arquivo \href{include/canvas.h}{\texttt{ {\ttfamily canvas.\+h}}}. O projeto também possui um outro cabeçalho, \href{include/common.h}{\texttt{ {\ttfamily common.\+h}}} que define algumas estruturas que podem ajudar na implementação, como uma estrutura para representar posição na matriz, uma para representar um pixel na imagem e uma para representar uma cor R\+GB. Para uma melhor compreensão do código oferecido, acesse a documentação do projeto \href{docs/html/index.html}{\texttt{ aqui}}.
+
+No projeto também existe um programa de teste, denominado \href{src/driver_canvas.cpp}{\texttt{ {\ttfamily driver\+\_\+canvas.\+cpp}}} que cria um canvas e gera um {\itshape checkerboard}. A imagem resultante, se o canvas foi implementado corretamente, corresponderá a \href{build/test.png}{\texttt{ essa image}}. Vale destacar que em uma imagem a {\bfseries{origem}} do sistema de coordenadas é no {\itshape canto inferior esquerdo}, ou seja, o eixo Y positivo aponta para cima. É por esse motivo que o pixel {\ttfamily (0,0)} pintado de verde dentro do {\ttfamily driver\+\_\+canvas.\+cpp} aparece no canto {\itshape inferior} esquerdo da imagem-\/exemplo, e não no canto {\itshape superior} esquerdo. Em resumo, o sistema de coordenadas da imagem é diferente do sistema de coordenadas de uma matriz.
+
+Note que o projeto utiliza uma biblioteca externa, \href{https://github.com/lvandeve/lodepng/blob/master/examples/example_encode.cpp}{\texttt{ lodepng}}, para gravar (codificar) uma imagem png. Contudo não é necessário instalar a biblioteca; basta copiar o arquivo {\ttfamily lodepng.\+cpp} para a pasta {\ttfamily src} e o arquivo {\ttfamily lodepng.\+h} para a pasta {\ttfamily include} e compilar o seu projeto normalmente com o \href{CMakeLists.txt}{\texttt{ cmake script}} disponível. 

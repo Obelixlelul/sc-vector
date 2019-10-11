@@ -1,0 +1,23 @@
+var searchData=
+[
+  ['c',['c',['../structlife_1_1_location2.html#a00720fe856afcb622f5393ba72770a5c',1,'life::Location2']]],
+  ['channels',['channels',['../structlife_1_1_color.html#acbb18a06aeb0d05c8e9477a25fbd32bf',1,'life::Color']]],
+  ['chrm_5fblue_5fx',['chrm_blue_x',['../struct_lode_p_n_g_info.html#a7394fc7407c168180b2cf64896fbe7fc',1,'LodePNGInfo']]],
+  ['chrm_5fblue_5fy',['chrm_blue_y',['../struct_lode_p_n_g_info.html#a9e6af4de8972b039ecb137fb32167505',1,'LodePNGInfo']]],
+  ['chrm_5fdefined',['chrm_defined',['../struct_lode_p_n_g_info.html#a8ada4ce0104dcb58bb7d0cbc8146c9eb',1,'LodePNGInfo']]],
+  ['chrm_5fgreen_5fx',['chrm_green_x',['../struct_lode_p_n_g_info.html#afcfedb61356a1c9b328e4098f03216af',1,'LodePNGInfo']]],
+  ['chrm_5fgreen_5fy',['chrm_green_y',['../struct_lode_p_n_g_info.html#adecaa88e64ed563ad05acd66a36d9a55',1,'LodePNGInfo']]],
+  ['chrm_5fred_5fx',['chrm_red_x',['../struct_lode_p_n_g_info.html#a1aef46690f4e090ec7ba2198dc25a0f7',1,'LodePNGInfo']]],
+  ['chrm_5fred_5fy',['chrm_red_y',['../struct_lode_p_n_g_info.html#a39824e3bce473eb8a9a27c8075fc407d',1,'LodePNGInfo']]],
+  ['chrm_5fwhite_5fx',['chrm_white_x',['../struct_lode_p_n_g_info.html#a71cf7e4f8837406061c3f045d7fc3006',1,'LodePNGInfo']]],
+  ['chrm_5fwhite_5fy',['chrm_white_y',['../struct_lode_p_n_g_info.html#a566d09783ce366924e246703132b074a',1,'LodePNGInfo']]],
+  ['color',['color',['../struct_lode_p_n_g_info.html#a0af9bab3435084780ce8c1cb69bb2628',1,'LodePNGInfo']]],
+  ['color_5fconvert',['color_convert',['../struct_lode_p_n_g_decoder_settings.html#af26f2b29cd338ce4476bee9571a0818a',1,'LodePNGDecoderSettings']]],
+  ['colored',['colored',['../struct_lode_p_n_g_color_profile.html#abf063a566a4ab9f4d71b49764573d610',1,'LodePNGColorProfile']]],
+  ['colortype',['colortype',['../struct_lode_p_n_g_color_mode.html#a4f3df7240411abe80546052d197fbe8d',1,'LodePNGColorMode']]],
+  ['compression_5fmethod',['compression_method',['../struct_lode_p_n_g_info.html#a42bcacd0dbaaea01c04cc87b58ac3c1d',1,'LodePNGInfo']]],
+  ['custom_5fcontext',['custom_context',['../struct_lode_p_n_g_decompress_settings.html#a66e3608b541c64bb275c0ac1a80c3ec6',1,'LodePNGDecompressSettings::custom_context()'],['../struct_lode_p_n_g_compress_settings.html#a62826645ef28e2a84dd2b65f547a2883',1,'LodePNGCompressSettings::custom_context()']]],
+  ['custom_5fdeflate',['custom_deflate',['../struct_lode_p_n_g_compress_settings.html#a55dafebbbe017806fb2bbc32bb40a59b',1,'LodePNGCompressSettings']]],
+  ['custom_5finflate',['custom_inflate',['../struct_lode_p_n_g_decompress_settings.html#a023aa5946c99934d40280850a4d8b204',1,'LodePNGDecompressSettings']]],
+  ['custom_5fzlib',['custom_zlib',['../struct_lode_p_n_g_decompress_settings.html#a9dd432e46330dbd2ce3ef1929c64337d',1,'LodePNGDecompressSettings::custom_zlib()'],['../struct_lode_p_n_g_compress_settings.html#a4a7835f394349f15f1302d11bcb0efa0',1,'LodePNGCompressSettings::custom_zlib()']]]
+];

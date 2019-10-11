@@ -1,0 +1,323 @@
+\hypertarget{classlife_1_1_canvas}{}\section{life\+::Canvas Class Reference}
+\label{classlife_1_1_canvas}\index{life::Canvas@{life::Canvas}}
+
+
+Provides methods for drawing on an image.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef unsigned char \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{component\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Type of a color channel. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classlife_1_1_canvas_ac719467462d0e2267cab32c5726b890a}{Canvas}} (size\+\_\+t w=0, size\+\_\+t h=0, short bs=4)
+\begin{DoxyCompactList}\small\item\em Constructor. \end{DoxyCompactList}\item 
+virtual \mbox{\hyperlink{classlife_1_1_canvas_a39370c890281ecd237ab35af1afff372}{$\sim$\+Canvas}} (void)
+\begin{DoxyCompactList}\small\item\em Destructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlife_1_1_canvas_a9abdcf7e5ad25469bf095eb7c7d067af}{Canvas}} (const \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \& \mbox{\hyperlink{classlife_1_1_canvas_a9263b4e39d40060948b8d0744f1cb5ca}{operator=}} (const \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&)
+\begin{DoxyCompactList}\small\item\em Assignment operator. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlife_1_1_canvas_a1d7a3dff13b38fd9d8323919c1ca6e41}{Canvas}} (\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&\&clone)
+\begin{DoxyCompactList}\small\item\em Move constructor. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \& \mbox{\hyperlink{classlife_1_1_canvas_ab0995a0cbff8bf9c701553c6871c20b9}{operator=}} (\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&\&)
+\begin{DoxyCompactList}\small\item\em Move assignment operator. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlife_1_1_canvas_aa8efaeffbb347652940006e5b3e3cac2}{clear}} (const \mbox{\hyperlink{structlife_1_1_color}{Color}} \&=B\+L\+A\+CK)
+\begin{DoxyCompactList}\small\item\em Clear the canvas with black color. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classlife_1_1_canvas_add0ca521248ddabdb6ab11fea8f8012a}{pixel}} (const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&, const \mbox{\hyperlink{structlife_1_1_color}{Color}} \&)
+\begin{DoxyCompactList}\small\item\em Set the color of a pixel on the canvas. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlife_1_1_color}{Color}} \mbox{\hyperlink{classlife_1_1_canvas_aa45e2eb2c9fcb732d8a0f748e605b813}{pixel}} (const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&) const
+\begin{DoxyCompactList}\small\item\em Get the pixel color from the canvas. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classlife_1_1_canvas_ad968f24eb984369bdcdcb2cd794f9dd4}{width}} (void) const
+\begin{DoxyCompactList}\small\item\em Return the canvas width. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classlife_1_1_canvas_ae404ca8fbd5162d3834571106a3edd95}{height}} (void) const
+\begin{DoxyCompactList}\small\item\em Return the canvas height. \end{DoxyCompactList}\item 
+const \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{component\+\_\+t}} $\ast$ \mbox{\hyperlink{classlife_1_1_canvas_a5078b777fd88aeba6c21e456e945ffaf}{pixels}} (void) const
+\begin{DoxyCompactList}\small\item\em Return the canvas pixels, as an unidimensional array of {\ttfamily unsigned char}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr int \mbox{\hyperlink{classlife_1_1_canvas_a91085de7195ca7c7a016442491dd972a}{image\+\_\+depth}} =4
+\begin{DoxyCompactList}\small\item\em Default value is R\+G\+BA (4 channels). \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+size\+\_\+t \mbox{\hyperlink{classlife_1_1_canvas_a6bbd32c0ee090231a2052e7cd882b55c}{m\+\_\+width}}
+\begin{DoxyCompactList}\small\item\em The image width in pixel units. \end{DoxyCompactList}\item 
+size\+\_\+t \mbox{\hyperlink{classlife_1_1_canvas_abe558e631ac0d987ead64bb181b9c1df}{m\+\_\+height}}
+\begin{DoxyCompactList}\small\item\em The image height in pixel units. \end{DoxyCompactList}\item 
+short \mbox{\hyperlink{classlife_1_1_canvas_aea389d8a5d0c86654c7fb70c709dc40f}{m\+\_\+block\+\_\+size}}
+\begin{DoxyCompactList}\small\item\em The virtual pixel size in pixels. \end{DoxyCompactList}\item 
+vector$<$ \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{component\+\_\+t}} $>$ \mbox{\hyperlink{classlife_1_1_canvas_acf072584d87267af3da4c3416c93362e}{m\+\_\+pixels}}
+\begin{DoxyCompactList}\small\item\em The pixels, stored as 4 R\+G\+BA components. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Provides methods for drawing on an image. 
+
+This is a drawing area on which we shall draw a Life representation.
+
+Here some information on the canvas properties\+:
+
+
+\begin{DoxyEnumerate}
+\item The drawing area has the origin set to the bottom left corner, with positive {\ttfamily X} axis going to the right and positive {\ttfamily Y} axis going to the top of the canvas.
+\item A pixel on the canvas has a square shape based on the pixel size set when the canvas is instantiated.
+\item Because of 2, we have the {\ttfamily virtual} dimension (set by the client), and the {\ttfamily real} dimension, which is w $\ast$ pixel\+\_\+size by h $\ast$ pixel\+\_\+size.
+\end{DoxyEnumerate}
+
+This class returns to the client an image (object) representation of the maze, which might be recorded by the client as a P\+NG image file. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}\label{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}} 
+\index{life::Canvas@{life::Canvas}!component\_t@{component\_t}}
+\index{component\_t@{component\_t}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{component\_t}{component\_t}}
+{\footnotesize\ttfamily typedef unsigned char \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{life\+::\+Canvas\+::component\+\_\+t}}}
+
+
+
+Type of a color channel. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{classlife_1_1_canvas_ac719467462d0e2267cab32c5726b890a}\label{classlife_1_1_canvas_ac719467462d0e2267cab32c5726b890a}} 
+\index{life::Canvas@{life::Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{Canvas()}{Canvas()}\hspace{0.1cm}{\footnotesize\ttfamily [1/3]}}
+{\footnotesize\ttfamily life\+::\+Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{size\+\_\+t}]{w = {\ttfamily 0},  }\item[{size\+\_\+t}]{h = {\ttfamily 0},  }\item[{short}]{bs = {\ttfamily 4} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Constructor. 
+
+Creates an empty canvas of the requested size. 
+\begin{DoxyParams}{Parameters}
+{\em w\+\_\+} & The canvas width in pixels. \\
+\hline
+{\em h\+\_\+} & The canvas height in pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlife_1_1_canvas_a39370c890281ecd237ab35af1afff372}\label{classlife_1_1_canvas_a39370c890281ecd237ab35af1afff372}} 
+\index{life::Canvas@{life::Canvas}!````~Canvas@{$\sim$Canvas}}
+\index{````~Canvas@{$\sim$Canvas}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{$\sim$Canvas()}{~Canvas()}}
+{\footnotesize\ttfamily virtual life\+::\+Canvas\+::$\sim$\+Canvas (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}, {\ttfamily [virtual]}}
+
+
+
+Destructor. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_a9abdcf7e5ad25469bf095eb7c7d067af}\label{classlife_1_1_canvas_a9abdcf7e5ad25469bf095eb7c7d067af}} 
+\index{life::Canvas@{life::Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{Canvas()}{Canvas()}\hspace{0.1cm}{\footnotesize\ttfamily [2/3]}}
+{\footnotesize\ttfamily life\+::\+Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Copy constructor. 
+
+Deep copy of the canvas. 
+\begin{DoxyParams}{Parameters}
+{\em clone} & The object we are copying from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlife_1_1_canvas_a1d7a3dff13b38fd9d8323919c1ca6e41}\label{classlife_1_1_canvas_a1d7a3dff13b38fd9d8323919c1ca6e41}} 
+\index{life::Canvas@{life::Canvas}!Canvas@{Canvas}}
+\index{Canvas@{Canvas}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{Canvas()}{Canvas()}\hspace{0.1cm}{\footnotesize\ttfamily [3/3]}}
+{\footnotesize\ttfamily life\+::\+Canvas\+::\+Canvas (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&\&}]{clone }\end{DoxyParamCaption})}
+
+
+
+Move constructor. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em clone} & The object we are move-\/constructing from. \\
+\hline
+\end{DoxyParams}
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{classlife_1_1_canvas_aa8efaeffbb347652940006e5b3e3cac2}\label{classlife_1_1_canvas_aa8efaeffbb347652940006e5b3e3cac2}} 
+\index{life::Canvas@{life::Canvas}!clear@{clear}}
+\index{clear@{clear}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily void life\+::\+Canvas\+::clear (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_color}{Color}} \&}]{ = {\ttfamily BLACK} }\end{DoxyParamCaption})}
+
+
+
+Clear the canvas with black color. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em The} & color we assign to all pixels. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlife_1_1_canvas_ae404ca8fbd5162d3834571106a3edd95}\label{classlife_1_1_canvas_ae404ca8fbd5162d3834571106a3edd95}} 
+\index{life::Canvas@{life::Canvas}!height@{height}}
+\index{height@{height}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{height()}{height()}}
+{\footnotesize\ttfamily size\+\_\+t life\+::\+Canvas\+::height (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the canvas height. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_a9263b4e39d40060948b8d0744f1cb5ca}\label{classlife_1_1_canvas_a9263b4e39d40060948b8d0744f1cb5ca}} 
+\index{life::Canvas@{life::Canvas}!operator=@{operator=}}
+\index{operator=@{operator=}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}}\& life\+::\+Canvas\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The object we are copying information from. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A reference to the {\ttfamily this} object. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlife_1_1_canvas_ab0995a0cbff8bf9c701553c6871c20b9}\label{classlife_1_1_canvas_ab0995a0cbff8bf9c701553c6871c20b9}} 
+\index{life::Canvas@{life::Canvas}!operator=@{operator=}}
+\index{operator=@{operator=}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{operator=()}{operator=()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{classlife_1_1_canvas}{Canvas}}\& life\+::\+Canvas\+::operator= (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classlife_1_1_canvas}{Canvas}} \&\&}]{ }\end{DoxyParamCaption})}
+
+
+
+Move assignment operator. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em source} & The object we are move-\/assigning from. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlife_1_1_canvas_add0ca521248ddabdb6ab11fea8f8012a}\label{classlife_1_1_canvas_add0ca521248ddabdb6ab11fea8f8012a}} 
+\index{life::Canvas@{life::Canvas}!pixel@{pixel}}
+\index{pixel@{pixel}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{pixel()}{pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily void life\+::\+Canvas\+::pixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{,  }\item[{const \mbox{\hyperlink{structlife_1_1_color}{Color}} \&}]{ }\end{DoxyParamCaption})}
+
+
+
+Set the color of a pixel on the canvas. 
+
+Assign a color to a pixel on the virtual image at the requested coordinate.
+
+\begin{DoxyNote}{Note}
+Nothing is done if the pixel coordinate is located outside the canvas. 
+\end{DoxyNote}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The 2D (virtual) coordinate of the pixel we want to change the color. \\
+\hline
+{\em c} & The color. \\
+\hline
+\end{DoxyParams}
+\mbox{\Hypertarget{classlife_1_1_canvas_aa45e2eb2c9fcb732d8a0f748e605b813}\label{classlife_1_1_canvas_aa45e2eb2c9fcb732d8a0f748e605b813}} 
+\index{life::Canvas@{life::Canvas}!pixel@{pixel}}
+\index{pixel@{pixel}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{pixel()}{pixel()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlife_1_1_color}{Color}} life\+::\+Canvas\+::pixel (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{ }\end{DoxyParamCaption}) const}
+
+
+
+Get the pixel color from the canvas. 
+
+
+\begin{DoxyExceptions}{Exceptions}
+{\em $<$tt$>$std\+::invalid\+\_\+argument()$<$/tt$>$} & it the pixel coordinate is located outside the canvas. \\
+\hline
+\end{DoxyExceptions}
+
+\begin{DoxyParams}{Parameters}
+{\em p} & The 2D (virtual) coordinate of the pixel we want to know the color of. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+The pixel color. 
+\end{DoxyReturn}
+\mbox{\Hypertarget{classlife_1_1_canvas_a5078b777fd88aeba6c21e456e945ffaf}\label{classlife_1_1_canvas_a5078b777fd88aeba6c21e456e945ffaf}} 
+\index{life::Canvas@{life::Canvas}!pixels@{pixels}}
+\index{pixels@{pixels}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{pixels()}{pixels()}}
+{\footnotesize\ttfamily const \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{component\+\_\+t}}$\ast$ life\+::\+Canvas\+::pixels (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the canvas pixels, as an unidimensional array of {\ttfamily unsigned char}. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_ad968f24eb984369bdcdcb2cd794f9dd4}\label{classlife_1_1_canvas_ad968f24eb984369bdcdcb2cd794f9dd4}} 
+\index{life::Canvas@{life::Canvas}!width@{width}}
+\index{width@{width}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{width()}{width()}}
+{\footnotesize\ttfamily size\+\_\+t life\+::\+Canvas\+::width (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Return the canvas width. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{classlife_1_1_canvas_a91085de7195ca7c7a016442491dd972a}\label{classlife_1_1_canvas_a91085de7195ca7c7a016442491dd972a}} 
+\index{life::Canvas@{life::Canvas}!image\_depth@{image\_depth}}
+\index{image\_depth@{image\_depth}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{image\_depth}{image\_depth}}
+{\footnotesize\ttfamily constexpr int life\+::\+Canvas\+::image\+\_\+depth =4\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Default value is R\+G\+BA (4 channels). 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_aea389d8a5d0c86654c7fb70c709dc40f}\label{classlife_1_1_canvas_aea389d8a5d0c86654c7fb70c709dc40f}} 
+\index{life::Canvas@{life::Canvas}!m\_block\_size@{m\_block\_size}}
+\index{m\_block\_size@{m\_block\_size}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{m\_block\_size}{m\_block\_size}}
+{\footnotesize\ttfamily short life\+::\+Canvas\+::m\+\_\+block\+\_\+size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The virtual pixel size in pixels. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_abe558e631ac0d987ead64bb181b9c1df}\label{classlife_1_1_canvas_abe558e631ac0d987ead64bb181b9c1df}} 
+\index{life::Canvas@{life::Canvas}!m\_height@{m\_height}}
+\index{m\_height@{m\_height}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{m\_height}{m\_height}}
+{\footnotesize\ttfamily size\+\_\+t life\+::\+Canvas\+::m\+\_\+height\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The image height in pixel units. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_acf072584d87267af3da4c3416c93362e}\label{classlife_1_1_canvas_acf072584d87267af3da4c3416c93362e}} 
+\index{life::Canvas@{life::Canvas}!m\_pixels@{m\_pixels}}
+\index{m\_pixels@{m\_pixels}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{m\_pixels}{m\_pixels}}
+{\footnotesize\ttfamily vector$<$ \mbox{\hyperlink{classlife_1_1_canvas_aa0de8894cefde751c08728d25e75a911}{component\+\_\+t}} $>$ life\+::\+Canvas\+::m\+\_\+pixels\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The pixels, stored as 4 R\+G\+BA components. 
+
+\mbox{\Hypertarget{classlife_1_1_canvas_a6bbd32c0ee090231a2052e7cd882b55c}\label{classlife_1_1_canvas_a6bbd32c0ee090231a2052e7cd882b55c}} 
+\index{life::Canvas@{life::Canvas}!m\_width@{m\_width}}
+\index{m\_width@{m\_width}!life::Canvas@{life::Canvas}}
+\subsubsection{\texorpdfstring{m\_width}{m\_width}}
+{\footnotesize\ttfamily size\+\_\+t life\+::\+Canvas\+::m\+\_\+width\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The image width in pixel units. 
+

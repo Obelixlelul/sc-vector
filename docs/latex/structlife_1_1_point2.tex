@@ -1,0 +1,154 @@
+\hypertarget{structlife_1_1_point2}{}\section{life\+::Point2 Struct Reference}
+\label{structlife_1_1_point2}\index{life::Point2@{life::Point2}}
+
+
+Represents a Pixel coordinate defined by {\ttfamily (x,y)}.  
+
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef long \mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}}
+\begin{DoxyCompactList}\small\item\em The cell coordinate type. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlife_1_1_point2_a7b7c76f2f3c4bd223d451fd4721eb6a5}{Point2}} (\mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} \mbox{\hyperlink{structlife_1_1_point2_af341f4da818e4699e52bb6e9bff041dd}{x}}=0, \mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} \mbox{\hyperlink{structlife_1_1_point2_aeb68123ffdb09000bb989dd38bb37af7}{y}}=0)
+\begin{DoxyCompactList}\small\item\em Creates a point 2d. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlife_1_1_point2_ab00bbd691da15470725326c377f3e202}{Point2}} (const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&clone)
+\begin{DoxyCompactList}\small\item\em Copy constructor. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlife_1_1_point2_a49365f204542c7716a842f6110fb012b}{operator==}} (const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Equality comparison. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{structlife_1_1_point2_a39b4687ad40acf7e01e906f8d0474edb}{operator!=}} (const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&rhs) const
+\begin{DoxyCompactList}\small\item\em Difference comparison. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlife_1_1_point2}{Point2}} \mbox{\hyperlink{structlife_1_1_point2_a9536e66da2ec9dc3784596291069b852}{operator-\/-\/}} ()
+\begin{DoxyCompactList}\small\item\em Pre decrement the point, as in {\ttfamily -\/-\/p}. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlife_1_1_point2}{Point2}} \mbox{\hyperlink{structlife_1_1_point2_ac7a2f2f21dd979316824a8a34b5c08d7}{operator-\/-\/}} (int)
+\begin{DoxyCompactList}\small\item\em Post decrement the point, as in {\ttfamily p-\/-\/}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} \mbox{\hyperlink{structlife_1_1_point2_af341f4da818e4699e52bb6e9bff041dd}{x}}
+\begin{DoxyCompactList}\small\item\em X coordinate of a point. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} \mbox{\hyperlink{structlife_1_1_point2_aeb68123ffdb09000bb989dd38bb37af7}{y}}
+\end{DoxyCompactItemize}
+\subsection*{Friends}
+\begin{DoxyCompactItemize}
+\item 
+std\+::ostream \& \mbox{\hyperlink{structlife_1_1_point2_a5b7b94167b12e9f06dc3cdecf3d19c65}{operator$<$$<$}} (std\+::ostream \&os, const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&p)
+\begin{DoxyCompactList}\small\item\em Stream extractor. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+Represents a Pixel coordinate defined by {\ttfamily (x,y)}. 
+
+\subsection{Member Typedef Documentation}
+\mbox{\Hypertarget{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}\label{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}} 
+\index{life::Point2@{life::Point2}!coord\_type@{coord\_type}}
+\index{coord\_type@{coord\_type}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{coord\_type}{coord\_type}}
+{\footnotesize\ttfamily typedef long \mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{life\+::\+Point2\+::coord\+\_\+type}}}
+
+
+
+The cell coordinate type. 
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{structlife_1_1_point2_a7b7c76f2f3c4bd223d451fd4721eb6a5}\label{structlife_1_1_point2_a7b7c76f2f3c4bd223d451fd4721eb6a5}} 
+\index{life::Point2@{life::Point2}!Point2@{Point2}}
+\index{Point2@{Point2}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{Point2()}{Point2()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily life\+::\+Point2\+::\+Point2 (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}}}]{x = {\ttfamily 0},  }\item[{\mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}}}]{y = {\ttfamily 0} }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Creates a point 2d. 
+
+\mbox{\Hypertarget{structlife_1_1_point2_ab00bbd691da15470725326c377f3e202}\label{structlife_1_1_point2_ab00bbd691da15470725326c377f3e202}} 
+\index{life::Point2@{life::Point2}!Point2@{Point2}}
+\index{Point2@{Point2}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{Point2()}{Point2()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily life\+::\+Point2\+::\+Point2 (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{clone }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Copy constructor. 
+
+
+
+\subsection{Member Function Documentation}
+\mbox{\Hypertarget{structlife_1_1_point2_a39b4687ad40acf7e01e906f8d0474edb}\label{structlife_1_1_point2_a39b4687ad40acf7e01e906f8d0474edb}} 
+\index{life::Point2@{life::Point2}!operator"!=@{operator"!=}}
+\index{operator"!=@{operator"!=}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{operator"!=()}{operator!=()}}
+{\footnotesize\ttfamily bool life\+::\+Point2\+::operator!= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Difference comparison. 
+
+\mbox{\Hypertarget{structlife_1_1_point2_a9536e66da2ec9dc3784596291069b852}\label{structlife_1_1_point2_a9536e66da2ec9dc3784596291069b852}} 
+\index{life::Point2@{life::Point2}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlife_1_1_point2}{Point2}} life\+::\+Point2\+::operator-\/-\/ (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Pre decrement the point, as in {\ttfamily -\/-\/p}. 
+
+\mbox{\Hypertarget{structlife_1_1_point2_ac7a2f2f21dd979316824a8a34b5c08d7}\label{structlife_1_1_point2_ac7a2f2f21dd979316824a8a34b5c08d7}} 
+\index{life::Point2@{life::Point2}!operator-\/-\/@{operator-\/-\/}}
+\index{operator-\/-\/@{operator-\/-\/}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{operator-\/-\/()}{operator--()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlife_1_1_point2}{Point2}} life\+::\+Point2\+::operator-\/-\/ (\begin{DoxyParamCaption}\item[{int}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Post decrement the point, as in {\ttfamily p-\/-\/}. 
+
+\mbox{\Hypertarget{structlife_1_1_point2_a49365f204542c7716a842f6110fb012b}\label{structlife_1_1_point2_a49365f204542c7716a842f6110fb012b}} 
+\index{life::Point2@{life::Point2}!operator==@{operator==}}
+\index{operator==@{operator==}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{operator==()}{operator==()}}
+{\footnotesize\ttfamily bool life\+::\+Point2\+::operator== (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{rhs }\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [inline]}}
+
+
+
+Equality comparison. 
+
+
+
+\subsection{Friends And Related Function Documentation}
+\mbox{\Hypertarget{structlife_1_1_point2_a5b7b94167b12e9f06dc3cdecf3d19c65}\label{structlife_1_1_point2_a5b7b94167b12e9f06dc3cdecf3d19c65}} 
+\index{life::Point2@{life::Point2}!operator$<$$<$@{operator$<$$<$}}
+\index{operator$<$$<$@{operator$<$$<$}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{operator$<$$<$}{operator<<}}
+{\footnotesize\ttfamily std\+::ostream\& operator$<$$<$ (\begin{DoxyParamCaption}\item[{std\+::ostream \&}]{os,  }\item[{const \mbox{\hyperlink{structlife_1_1_point2}{Point2}} \&}]{p }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [friend]}}
+
+
+
+Stream extractor. 
+
+
+
+\subsection{Member Data Documentation}
+\mbox{\Hypertarget{structlife_1_1_point2_af341f4da818e4699e52bb6e9bff041dd}\label{structlife_1_1_point2_af341f4da818e4699e52bb6e9bff041dd}} 
+\index{life::Point2@{life::Point2}!x@{x}}
+\index{x@{x}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{x}{x}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} life\+::\+Point2\+::x}
+
+
+
+X coordinate of a point. 
+
+\mbox{\Hypertarget{structlife_1_1_point2_aeb68123ffdb09000bb989dd38bb37af7}\label{structlife_1_1_point2_aeb68123ffdb09000bb989dd38bb37af7}} 
+\index{life::Point2@{life::Point2}!y@{y}}
+\index{y@{y}!life::Point2@{life::Point2}}
+\subsubsection{\texorpdfstring{y}{y}}
+{\footnotesize\ttfamily \mbox{\hyperlink{structlife_1_1_point2_abc66c92a3ad99b7fb9d8c179213edf58}{coord\+\_\+type}} life\+::\+Point2\+::y}
+
+Y coordinate of a point. 
